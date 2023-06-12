@@ -17,6 +17,11 @@ jobs:
         run: |
           git config --global user.name "Walter Brand"
           git config --global user.email "your-email@example.com"
+          git config --global credential.helper 'store --file ~/.git-credentials'
+          echo "protocol=https
+          host=github.com
+          username=github-actions[bot]
+          password=${{ secrets.PAT_TOKEN }}" > ~/.git-credentials
 
       - name: Make Change
         run: echo "Your commit message" >> file.txt
