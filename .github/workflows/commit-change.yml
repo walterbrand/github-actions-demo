@@ -1,0 +1,28 @@
+name: Commit Change
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "Walter Brand"
+          git config --global user.email "your-email@example.com"
+
+      - name: Make Change
+        run: echo "Your commit message" >> file.txt
+
+      - name: Commit and Push
+        run: |
+          git add file.txt
+          git commit -m "Commit message from GitHub Actions"
+          git push
