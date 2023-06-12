@@ -37,4 +37,4 @@ jobs:
           
       # Does a commit
       - name: Commit change
-        run: git commit -m"test message"
+        run: echo My Message!
