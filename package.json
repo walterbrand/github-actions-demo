@@ -1,0 +1,7 @@
+{
+  "name": "Github actions Demo",
+  "version": "0.0.0",
+  "scripts": {
+    "something": "echo hello"
+  }
+}
