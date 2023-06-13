@@ -37,4 +37,4 @@ jobs:
           
       # Does a commit
       - name: Commit change
-        run: echo My Message!
+        run: npm run something
